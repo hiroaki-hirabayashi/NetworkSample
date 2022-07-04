@@ -19,6 +19,11 @@
 		F49744FB286CC2230000A7B0 /* NetworkSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49744FA286CC2230000A7B0 /* NetworkSampleTests.swift */; };
 		F4974505286CC2230000A7B0 /* NetworkSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4974504286CC2230000A7B0 /* NetworkSampleUITests.swift */; };
 		F4974507286CC2230000A7B0 /* NetworkSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4974506286CC2230000A7B0 /* NetworkSampleUITestsLaunchTests.swift */; };
+		F49745172871D36A0000A7B0 /* NetworkSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49745162871D36A0000A7B0 /* NetworkSampleView.swift */; };
+		F497451928731AD40000A7B0 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497451828731AD40000A7B0 /* NotificationName.swift */; };
+		F497451B28731B5A0000A7B0 /* NotificationUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497451A28731B5A0000A7B0 /* NotificationUserInfoKey.swift */; };
+		F497451D28731BAA0000A7B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497451C28731BAA0000A7B0 /* NetworkManager.swift */; };
+		F497452028731C5E0000A7B0 /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497451F28731C5E0000A7B0 /* NetworkInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		F4974500286CC2230000A7B0 /* NetworkSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4974504286CC2230000A7B0 /* NetworkSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSampleUITests.swift; sourceTree = "<group>"; };
 		F4974506286CC2230000A7B0 /* NetworkSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F49745162871D36A0000A7B0 /* NetworkSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSampleView.swift; sourceTree = "<group>"; };
+		F497451828731AD40000A7B0 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		F497451A28731B5A0000A7B0 /* NotificationUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUserInfoKey.swift; sourceTree = "<group>"; };
+		F497451C28731BAA0000A7B0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F497451F28731C5E0000A7B0 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +110,6 @@
 				599328E067A14C70D455444B /* Pods-NetworkSampleTests.debug.xcconfig */,
 				899A684DD71FA91EA4CA9C27 /* Pods-NetworkSampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,6 +150,8 @@
 			children = (
 				F49744E4286CC2200000A7B0 /* NetworkSampleApp.swift */,
 				F49744E6286CC2200000A7B0 /* ContentView.swift */,
+				F497451E28731C1B0000A7B0 /* Manager */,
+				F49745132871D2380000A7B0 /* Presentation */,
 				F49744E8286CC2220000A7B0 /* Assets.xcassets */,
 				F49744ED286CC2220000A7B0 /* Persistence.swift */,
 				F49744EF286CC2220000A7B0 /* NetworkSample.xcdatamodeld */,
@@ -172,6 +183,41 @@
 				F4974506286CC2230000A7B0 /* NetworkSampleUITestsLaunchTests.swift */,
 			);
 			path = NetworkSampleUITests;
+			sourceTree = "<group>";
+		};
+		F49745132871D2380000A7B0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F49745142871D23E0000A7B0 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F49745142871D23E0000A7B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F49745152871D24B0000A7B0 /* Network */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F49745152871D24B0000A7B0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F49745162871D36A0000A7B0 /* NetworkSampleView.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F497451E28731C1B0000A7B0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F497451C28731BAA0000A7B0 /* NetworkManager.swift */,
+				F497451F28731C5E0000A7B0 /* NetworkInfo.swift */,
+				F497451828731AD40000A7B0 /* NotificationName.swift */,
+				F497451A28731B5A0000A7B0 /* NotificationUserInfoKey.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,8 +423,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49744EE286CC2220000A7B0 /* Persistence.swift in Sources */,
+				F497451928731AD40000A7B0 /* NotificationName.swift in Sources */,
+				F497451B28731B5A0000A7B0 /* NotificationUserInfoKey.swift in Sources */,
 				F49744E7286CC2200000A7B0 /* ContentView.swift in Sources */,
+				F497451D28731BAA0000A7B0 /* NetworkManager.swift in Sources */,
+				F49745172871D36A0000A7B0 /* NetworkSampleView.swift in Sources */,
 				F49744F1286CC2220000A7B0 /* NetworkSample.xcdatamodeld in Sources */,
+				F497452028731C5E0000A7B0 /* NetworkInfo.swift in Sources */,
 				F49744E5286CC2200000A7B0 /* NetworkSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
