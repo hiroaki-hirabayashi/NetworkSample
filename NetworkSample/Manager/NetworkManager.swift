@@ -9,7 +9,6 @@ import Foundation
 import Network
 
 /// ネットワークの変更を監視
-///
 /// ネットワークの変更をNotificationName.networkPathUpdateで通知します。
 /// ネットワークの監視を開始するにはsetupを実行してください。
 public class NetworkManager {

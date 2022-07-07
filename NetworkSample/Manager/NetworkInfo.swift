@@ -9,7 +9,6 @@ import Foundation
 import Network
 
 /// ネットワーク監視状況を通知する情報
-///
 /// コンテンツで必要な処理は、Extensionなどで追加してください。
 /// 共通で使う場合は、ここに追加してください。
 public struct NetworkInfo {
