@@ -6,7 +6,7 @@
 |---|
 |<img width="300" alt="">|
 
-●参考資料
+参考資料
 
 https://developer.apple.com/documentation/network/nwpathmonitor
 
