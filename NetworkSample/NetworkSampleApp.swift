@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct NetworkSampleApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
@@ -16,5 +17,15 @@ struct NetworkSampleApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+    }
+}
+
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // ネットワーク監視開始
+        NetworkManager.shared.setUp()
+        
+        return true
     }
 }
